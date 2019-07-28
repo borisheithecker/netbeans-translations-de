@@ -9,12 +9,12 @@
     <target name="build" depends="build-language-jars,netbeans,test-build"/>
     
     <target name="build-language-jars">
-<!--        <taskdef name="jhindexer"
-                 classname="org.netbeans.nbbuild.JHIndexer"
-                 classpath="${nbantext.jar}"/>
-        <taskdef name="locjhindexer"
-                 classname="org.netbeans.nbbuild.LocJHIndexer"
-                 classpath="${nbantext.jar}"/>-->
+        <!--        <taskdef name="jhindexer"
+        classname="org.netbeans.nbbuild.JHIndexer"
+        classpath="${nbantext.jar}"/>
+<taskdef name="locjhindexer"
+        classname="org.netbeans.nbbuild.LocJHIndexer"
+        classpath="${nbantext.jar}"/>-->
         <!--        <taskdef name="repeat"
         classname="org.netbeans.nbbuild.Repeat"
         classpath="${nbantext.jar}"/> -->
@@ -49,5 +49,10 @@
         </package-build>
         <!--<repeat target="copy-docs-for-locale" name="one.locale" values="${locales}"/>-->
     </target>
- 
+    
+    <target name="publish" depends="nbm">
+        <mkdir dir="releases" />
+        <copy file="${build.dir}/${nbm}" toDir="releases"/>
+    </target>
+    
 </project>
