@@ -50,9 +50,4 @@
         <!--<repeat target="copy-docs-for-locale" name="one.locale" values="${locales}"/>-->
     </target>
     
-    <target name="publish" depends="nbm">
-        <mkdir dir="releases" />
-        <copy file="${build.dir}/${nbm}" toDir="releases"/>
-    </target>
-    
 </project>
