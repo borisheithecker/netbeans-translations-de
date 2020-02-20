@@ -35,7 +35,7 @@
                 <!--<pathelement path="nbantext.jar"/>-->
             </classpath>
         </taskdef>
-        <package-build src="locsrc" locales="${locales}" dist="release/modules/locale" nbms="${nbms.dir}" nbmsDist="${nbms.dist.dir}" 
+        <package-build src="${dist.dir}" locales="${locales}" dist="release/modules/locale" nbms="${nbms.dir}" nbmsDist="${nbms.dist.dir}" 
                        keystore="${keystore}" storepass="${storepass}" alias="${nbm_alias}">
             <classpath>
                 <pathelement location="nbantext.jar"/>
